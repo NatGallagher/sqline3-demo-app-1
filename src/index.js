@@ -15,3 +15,10 @@ let db = new sqlite3.Database(_dbname, (err) => {
   }
   console.log('Connected successfully.');
 });
+
+db.all("SELECT * FROM product", [], (err, row) => {
+    if (err) {
+      throw err; 
+    }
+    console.log(row);
+});
