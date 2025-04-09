@@ -3,20 +3,20 @@
 const sqlite3 = require('sqlite3').verbose();
 
 //windwos
-let _dbname = "data\\demodb1.db"
-//let _dbname ="data\dashboard.db"
+//let _dbname = "data\\demodb1.db"
+let _dbname ="data/dashboard.db"
 
 //macos, linux os 
 //let _dbname = "data/demodb1.db"
 
-let db = new sqlite3.Database(_dbname, (err) => {
+let db = new sqlite3.Database(_dbname, sqlite3.OPEN_READWRITE, (err) => {
   if (err) {
     return console.error(err.message);
   }
   console.log('Connected successfully.');
 });
 
-db.all("SELECT * FROM product", [], (err, row) => {
+db.all("SELECT * FROM user", [], (err, row) => {
     if (err) {
       throw err; 
     }
