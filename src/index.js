@@ -3,10 +3,10 @@
 const sqlite3 = require('sqlite3').verbose();
 
 //windwos
-//let _dbname = "data\\demodb1.db"
+let _dbname = "data\demodb1.db"
 
 //macos, linux os 
-let _dbname = "data//demodb1.db"
+//let _dbname = "data/demodb1.db"
 
 let db = new sqlite3.Database(_dbname, (err) => {
   if (err) {
