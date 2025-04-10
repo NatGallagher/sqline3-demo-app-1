@@ -4,7 +4,7 @@ const sqlite3 = require('sqlite3').verbose();
 
 //windwos
 //let _dbname = "data\\demodb1.db"
-let _dbname ="data/dashboard.db"
+let _dbname ="src/data/dashboard.db"
 
 //macos, linux os 
 //let _dbname = "data/demodb1.db"
